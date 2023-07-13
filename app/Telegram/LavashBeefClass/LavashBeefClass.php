@@ -21,16 +21,6 @@ class LavashBeefClass
                 ],
             ], 'resize_keyboard' => true
         ]];
-        $photo = fopen('public/beefLavash.jpg', 'r+');
-        $bot->onCallbackQueryData('23000 сум', function(Nutgram $bot){
-            $bot->answerCallbackQuery([
-                'text' => '23000 сум'
-            ]);
-        });
-        $bot->onCallbackQueryData('26000 сум', function(Nutgram $bot){
-            $bot->answerCallbackQuery([
-                'text' => '26000 сум'
-            ]);
-        });
+        $bot->sendMessage('Выберите следущее', $kb);
     }
 }
